@@ -36,13 +36,11 @@ function EvenMoreProjects() {
                 {/* Two Image Placeholders */}
                 <div style={{ display: "flex", gap: "1rem", marginBottom: "1rem" }}>
                   <div className="image-placeholder">Img 1</div>
-                  <div className="image-placeholder">Img 2</div>
                 </div>
 
                 {/* Buttons */}
                 <div style={{ display: "flex", gap: "1rem", justifyContent: "center" }}>
-                  <button className="btn-orange">Btn 1</button>
-                  <button className="btn-orange">Btn 2</button>
+                  <button className="btn-orange">View</button>
                 </div>
               </div>
             ))}

@@ -9,28 +9,28 @@ import antiSleep from '../assets/anti-sleep.jpeg';
 function Projects() {
   const projects = [
     {
-      title: "Python Projects",
+      title: "Python Project",
       image: pythonImg,
       link: "/python",
-      description: "Explore my Python development work",
+      description: "Full-Stack Django Application with REST API + AI Features",
     },
     {
-      title: "C# Projects",
+      title: "C# Project",
       image: csharpImg,
       link: "/csharp",
-      description: "Check out my C# applications",
+      description: "Enterprise-Grade ASP.NET Core MVC + Web API Application with Authentication, Payment Integration, and Cloud Deployment",
     },
     {
-      title: "JavaScript Projects",
+      title: "JavaScript Project",
       image: javascriptImg,
       link: "/javascript",
-      description: "Browse my JavaScript projects",
+      description: "Full MERN-Stack (MongoDB, Express.js, React, Node.js) or Node.js + TypeScript Real-Time Collaboration Platform with GraphQL, Authentication, and Deployment",
     },
     {
-      title: "Project 361",
+      title: "AI-Powered Anti-Sleep Glasses",
       image: antiSleep,
       link: "/project361",
-      description: "Browse my Project 361 projects",
+      description: "Designed AI-driven glasses that monitor eye and head movements to prevent accidents. Integrated with vehicle dashboards for seamless alert delivery.",
     },
   ];
 
@@ -66,7 +66,7 @@ function Projects() {
                 <p>{project.description}</p>
                 <div>
                   <Link to={project.link} className="btn-orange">
-                    View Projects
+                    View
                   </Link>
                 </div>
               </div>

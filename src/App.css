@@ -1,3 +1,25 @@
+/* ======= Global responsiveness additions (place at bottom of App.css or index.css) ======= */
+
+/* Slight typography baseline (desktop values preserved) */
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.2rem; }
+
+@media (max-width: 768px) {
+  /* Scale down headings specifically for mobile (desktop unchanged) */
+  h1 { font-size: 1.5rem; }
+  h2 { font-size: 1.2rem; }
+  h3 { font-size: 1rem; }
+
+  /* Containers and spacing */
+  .container { padding: 1rem 1.25rem; }
+  .project-box { padding: 1rem; }
+
+  /* Navbar spacing adjusted (hamburger visual) */
+  nav { padding: 0.75rem 1rem; }
+}
+
+
 /* -------------------------------
    GLOBAL RESET & THEME
 ---------------------------------- */

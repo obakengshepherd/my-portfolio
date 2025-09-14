@@ -156,7 +156,7 @@ const Homepage = () => {
             <h3>Python Project</h3>
             <img src={pythonImg} alt="Python Projects" className="project-image" />
             <Link to="/python" className="btn-orange">
-              View Project
+              View
             </Link>
           </div>
           
@@ -164,7 +164,7 @@ const Homepage = () => {
             <h3>C# Project</h3>
             <img src={csharpImg} alt="C# Projects" className="project-image" />
             <Link to="/csharp" className="btn-orange">
-              View Project
+              View
             </Link>
           </div>
           
@@ -172,15 +172,15 @@ const Homepage = () => {
             <h3>JavaScript Project</h3>
             <img src={javascriptImg} alt="JavaScript Projects" className="project-image" />
             <Link to="/javascript" className="btn-orange">
-              View Project
+              View
             </Link>
           </div>
 
           <div className="project-box">
-            <h3>Project 361</h3>
+            <h3>AI-Powered Anti-Sleep Glasses</h3>
             <img src={antiSleep} alt="Project 361" className="project-image" />
             <Link to="/project361" className="btn-orange">
-              View Project
+              View
             </Link>
           </div>
 
