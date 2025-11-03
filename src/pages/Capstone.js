@@ -1,13 +1,40 @@
-// src/pages/JavaScript.js
+// src/pages/Capstone.js
 import Navbar from "../components/Navbar";
 import { FaGithub, FaLinkedin, FaEnvelope, FaPhone } from "react-icons/fa";
-import architectural from '../assets/architectural-diagrams.png';
-import design from '../assets/system-design.jpeg';
-import test from '../assets/testing.webp';
-import javascriptImg from '../assets/JavaScript.png';
+import architectural from "../assets/architectural-diagrams.png";
+import design from "../assets/system-design.jpeg";
+import test from "../assets/testing.webp";
+import javascriptImg from "../assets/JavaScript.png";
+import ImageModal from "../components/ImageModal";
+import { useState, useEffect } from "react";
 
+function Capstone() {
+  // Add state for the modal
+  const [modalImage, setModalImage] = useState({
+    isOpen: false,
+    url: "",
+    alt: "",
+  });
 
-function JavaScript() {
+  // Prevent scroll when modal is open
+  useEffect(() => {
+    if (modalImage.isOpen) {
+      document.body.classList.add("modal-open");
+    } else {
+      document.body.classList.remove("modal-open");
+    }
+  }, [modalImage.isOpen]);
+
+  // Handler to open modal
+  const openModal = (imageUrl, altText) => {
+    setModalImage({ isOpen: true, url: imageUrl, alt: altText });
+  };
+
+  // Handler to close modal
+  const closeModal = () => {
+    setModalImage({ isOpen: false, url: "", alt: "" });
+  };
+
   return (
     <div className="homepage">
       <Navbar />
@@ -24,7 +51,7 @@ function JavaScript() {
         <div className="container projects-section">
           {/* Project Title */}
           <div className="projects-header">
-            <h2>Python Projects</h2>
+            <h2>Capstone Project</h2>
           </div>
 
           {/* First Sub-Container (half-height, GitHub on far right) */}
@@ -32,17 +59,27 @@ function JavaScript() {
             <h2>Project Title</h2>
 
             <div className="project-top-content">
-              <img src={javascriptImg} alt="Profile" className="profile-img" />
+              <img
+                src={javascriptImg}
+                alt="Profile"
+                className="profile-img"
+                onClick={() => openModal(javascriptImg, "Profile")}
+                loading="lazy"
+              />
 
               <div className="project-description">
                 <p>
-                  Showcases mastery of Node.js backend, asynchronous programming, Websockets for real-time collaboration, GraphQL APIs, authentication with JWT, database management (SQL & NoSQL), TypeScript usage, and deployment. Reflects modern JavaScript ecosystem and frontend-backend integration.
+                  Showcases mastery of Node.js backend, asynchronous
+                  programming, Websockets for real-time collaboration, GraphQL
+                  APIs, authentication with JWT, database management (SQL &
+                  NoSQL), TypeScript usage, and deployment. Reflects modern
+                  JavaScript ecosystem and frontend-backend integration.
                 </p>
               </div>
 
               <div className="github-link">
                 <a
-                  href="https://https://github.com/obakengshepherd/capstone-mern-collab"
+                  href="https://github.com/obakengshepherd/InsurancePlatform"
                   target="_blank"
                   rel="noreferrer"
                   aria-label="GitHub Repository"
@@ -62,14 +99,24 @@ function JavaScript() {
           </div>
 
           {/* Separator */}
-          <h2 style={{ marginTop: "1rem" }}>Project Title - Behind the Scenes</h2>
+          <h2 style={{ marginTop: "1rem" }}>
+            Project Title - Behind the Scenes
+          </h2>
 
           {/* Sub-1 */}
           <div className="project-box stretched">
             <h2>Architectural Diagram</h2>
             <h3>Visuals</h3>
             <div className="sub-content">
-              <img src={architectural} alt="architectural-diagrams" className="project-image" />
+              <img
+                src={architectural}
+                alt="architectural-diagrams"
+                className="project-image"
+                onClick={() =>
+                  openModal(architectural, "architectural-diagrams")
+                }
+                loading="lazy"
+              />
               <p>Mini description about the architecture diagram visuals.</p>
             </div>
           </div>
@@ -79,7 +126,13 @@ function JavaScript() {
             <h2>System Design Document</h2>
             <h3>Documentation</h3>
             <div className="sub-content">
-              <img src={design} alt="system-design" className="project-image" />
+              <img
+                src={design}
+                alt="system-design"
+                className="project-image"
+                onClick={() => openModal(design, "system-design")}
+                loading="lazy"
+              />
               <p>Mini description about the system design documentation.</p>
             </div>
           </div>
@@ -89,12 +142,26 @@ function JavaScript() {
             <h2>Test and Coverage Show</h2>
             <h3>Testing</h3>
             <div className="sub-content">
-              <img src={test} alt="testing" className="project-image" />
+              <img
+                src={test}
+                alt="testing"
+                className="project-image"
+                onClick={() => openModal(test, "testing")}
+                loading="lazy"
+              />
               <p>Mini description about testing and coverage results.</p>
             </div>
           </div>
         </div>
       </main>
+
+      {/* Add the modal component */}
+      <ImageModal
+        isOpen={modalImage.isOpen}
+        imageUrl={modalImage.url}
+        altText={modalImage.alt}
+        onClose={closeModal}
+      />
 
       {/* Contact Me Section */}
       <section id="contact" className="contact-container">
@@ -104,7 +171,8 @@ function JavaScript() {
             <FaPhone aria-hidden="true" /> <span>067 630 8354</span>
           </div>
           <div>
-            <FaEnvelope aria-hidden="true" /> <span>obakengtsaagane@gmail.com</span>
+            <FaEnvelope aria-hidden="true" />{" "}
+            <span>obakengtsaagane@gmail.com</span>
           </div>
           <div>
             <a
@@ -144,4 +212,4 @@ function JavaScript() {
   );
 }
 
-export default JavaScript;
+export default Capstone;
