@@ -62,7 +62,7 @@ function Capstone() {
               <img
                 src={javascriptImg}
                 alt="Profile"
-                className="profile-img"
+                className="project-image"
                 onClick={() => openModal(javascriptImg, "Profile")}
                 loading="lazy"
               />

@@ -4,39 +4,30 @@ import "./Homepage.css";
 import profilePic from "../assets/profile.jpeg"; // replace with your image
 import resumePDF from "../assets/resume.pdf"; // replace with your resume file
 import {
-  FaPython,
   FaJsSquare,
   FaDatabase,
   FaReact,
-  FaServer,
-  FaTools,
   FaGithub,
+  FaServer,
   FaCloud,
-  FaBrain,
-  FaLinkedin,
   FaPhone,
   FaEnvelope,
+  FaTools,
   FaWindows,
   FaMicrosoft,
+  FaLinkedin,
 } from "react-icons/fa";
 
 import {
   SiDotnet,
   SiExpress,
   SiMongodb,
-  SiPostgresql,
   SiPostman,
   SiEslint,
-  SiSwagger,
-  SiJest,
-  SiNpm,
+  SiJsonwebtokens,
+  SiChartdotjs,
   SiHeroku, // Removed SiMicrosoftazure
   SiVercel,
-  SiStripe,
-  SiOpenai,
-  SiTypescript,
-  SiCypress,
-  SiYarn,
 } from "react-icons/si";
 import javascriptImg from "../assets/JavaScript.png";
 import antiSleep from "../assets/anti-sleep.jpeg";
@@ -46,62 +37,47 @@ const Homepage = () => {
 
   const skillsData = {
     Languages: [
-      { icon: <FaPython />, name: "  Python 3.10+" },
-      { icon: <FaMicrosoft />, name: "  C#" },
+      { icon: <FaMicrosoft />, name: "  C# (.NET 8)" },
       { icon: <FaJsSquare />, name: "  JavaScript (ES6+)" },
-      { icon: <SiTypescript />, name: "  TypeScript" },
       { icon: <FaDatabase />, name: "  SQL" },
-      { icon: <FaDatabase />, name: "  NoSQL (PostgreSQL, MySQL, MongoDB)" },
+      { icon: <FaDatabase />, name: "  NoSQL (MongoDB)" },
     ],
     Frameworks: [
-      { icon: <SiDotnet />, name: "  ASP.NET Core 8 / Entity Framework Core" },
+      { icon: <SiDotnet />, name: "  ASP.NET Core 8" },
+      { icon: <SiDotnet />, name: "  Entity Framework Core" },
       { icon: <SiExpress />, name: "  Express.js" },
-      { icon: <FaReact />, name: "  React" },
+      { icon: <FaReact />, name: "  React (Hooks, Context)" },
       { icon: <FaServer />, name: "  REST APIs, GraphQL, WebSockets" },
       {
         icon: <FaServer />,
         name: "  Authentication & Authorization (JWT, OAuth2, Identity Core)",
       },
       { icon: <SiMongodb />, name: "  Mongoose" },
+      { icon: <SiJsonwebtokens />, name: "JWT" },
+      { icon: <SiChartdotjs />, name: "Chart.js/Recharts" },
     ],
     Tools: [
       { icon: <FaWindows />, name: "  Windows Development Environment" },
       { icon: <FaMicrosoft />, name: "  Microsoft Development Tools" },
       { icon: <FaGithub />, name: "  Git / GitHub" },
-      { icon: <SiPostman />, name: "  Postman / GraphQL Playground" },
+      { icon: <SiPostman />, name: "  Postman" },
       { icon: <SiMongodb />, name: "  MongoDB Compass" },
       { icon: <SiEslint />, name: "  ESLint / Prettier" },
-      {
-        icon: <SiSwagger />,
-        name: "  Swagger (drf-yasg, Swashbuckle.AspNetCore)",
-      },
-      {
-        icon: <SiJest />,
-        name: "  Unit Testing (unittest, pytest, MSTest, NUnit, Moq, Jest, Supertest, Cypress)",
-      },
-      { icon: <SiNpm />, name: "  pip / NuGet / npm / Yarn" },
-      { icon: <FaTools />, name: "  python-dotenv" },
-      { icon: <FaTools />, name: "  Draw.io / Lucidchart" },
-      { icon: <FaTools />, name: "  OBS Studio / Loom" },
-      { icon: <SiCypress />, name: "  Cypress" },
-      { icon: <SiYarn />, name: "  Yarn Package Manager" },
+      { icon: <FaTools />, name: "VS Code" },
+      { icon: <FaTools />, name: "xUnit" },
+      { icon: <FaTools />, name: "Serilog" },
     ],
+
     Platforms: [
-      { icon: <FaWindows />, name: "  Azure (App Service)" },
-      { icon: <SiHeroku />, name: "  Heroku / Render" },
+      { icon: <SiHeroku />, name: "  Render" },
       { icon: <SiVercel />, name: "  Vercel / Netlify" },
       { icon: <SiMongodb />, name: "  MongoDB Atlas" },
-      { icon: <FaDatabase />, name: "  SQLite" },
-      { icon: <SiPostgresql />, name: "  PostgreSQL / SQL Server" },
-      { icon: <FaGithub />, name: "  GitHub Pages" },
-      { icon: <SiStripe />, name: "  Stripe" },
-      { icon: <SiOpenai />, name: "  OpenAI API" },
-    ],
-    "Soft Skills": [
-      { icon: <FaCloud />, name: "  Cloud-Native Solutions" },
-      { icon: <FaBrain />, name: "  Collaboration" },
-      { icon: <FaBrain />, name: "  Problem-Solving" },
-      { icon: <FaBrain />, name: "  Continuous Learning" },
+      {
+        icon: <FaDatabase />,
+        name: "  SQL Server (EF Core Migrations, LINQ, Views)",
+      },
+      { icon: <FaGithub />, name: "  GitHub Pages / GitHub Actions CI/CD" },
+      { icon: <FaCloud />, name: "HTTPS" },
     ],
   };
 
@@ -115,7 +91,7 @@ const Homepage = () => {
 
         <div className="hero-center">
           <h1>Software Developer</h1>
-          <h3>Web Developent | Databases</h3>
+          <h3>Web Development | Databases</h3>
           <div className="hero-buttons">
             <a href="#projects" className="btn-orange">
               My Work

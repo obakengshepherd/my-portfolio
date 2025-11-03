@@ -56,14 +56,13 @@ function Project361() {
 
           {/* First Sub-Container (half-height) */}
           <div className="project-box stretched">
-            <h2>AI-Powered Anti-Sleep Glasses</h2>
             <h3>IoT | Embedded AI | Computer Vision | Safety Innovation</h3>
 
-            <div className="project-top-content">
+            <div className="sub-content">
               <img
                 src={prototypeImg}
                 alt="3D Prototype of Anti-Sleep Glasses"
-                className="profile-img"
+                className="project-image"
                 onClick={() =>
                   openModal(prototypeImg, "3D Prototype of Anti-Sleep Glasses")
                 }
